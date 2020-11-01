@@ -1,0 +1,57 @@
+GET http://localhost:80/file?url=file/e9d93144-47b4-44fd-9cdc-b58894b6723a.txt
+
+
+###
+POST http://localhost:80/file
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="test.txt"
+
+< C:\Users\XQ\OneDrive\桌面\test.txt
+--WebAppBoundary--
+
+###
+GET http://localhost:80/author
+Accept: application/json
+
+###
+POST http://localhost:80/author
+Content-Type: application/json
+
+{
+  "name": "1234243",
+  "info": {
+    "school": "aasdasd"
+  }
+}
+###
+GET http://localhost:80/
+Content-Type: application/json
+
+
+###
+POST http://localhost:80/
+Content-Type: application/json
+
+{
+  "productId": "demoData",
+  "name": "demoData",
+  "services": [{
+    "id": "qweasdw",
+    "name": "demoData"
+  },{
+    "id": "demoData",
+    "name": "demoData"
+  }],
+  "manufacturer": {
+    "id": "demoData",
+    "name": "demoData"
+  }
+}
+
+<> 2020-10-25T044111.500.json
+
+###
+
+
